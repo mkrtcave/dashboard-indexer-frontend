@@ -8,11 +8,20 @@ class NavBar extends React.Component {
     render() {
         return (
             <Bootstrap.Navbar id="mainNavBar" bg="dark" variant="dark" sticky={"top"}>
-                <Bootstrap.Navbar.Brand href="/" className="mr-auto">
-                    AdminApp
-                </Bootstrap.Navbar.Brand>
+                <Link to="/" className="navbar-brand mr-auto">AdminApp</Link>
                 <Route exact path={"/"}>
+                    <Link to={'/ontology-sets'}>
+                        <Bootstrap.Button variant={"success"} className={'mr-3'}>Ontology dashboard</Bootstrap.Button>
+                    </Link>
                     <Link to={'/index'}>
+                        <Bootstrap.Button variant={"success"} className={'mr-3'}>Create new</Bootstrap.Button>
+                    </Link>
+                </Route>
+                <Route exact path={"/ontology-sets"}>
+                    <Link to={'/'}>
+                        <Bootstrap.Button variant={"success"} className={'mr-3'}>Indexer</Bootstrap.Button>
+                    </Link>
+                    <Link to={'/ontology-set'}>
                         <Bootstrap.Button variant={"success"} className={'mr-3'}>Create new</Bootstrap.Button>
                     </Link>
                 </Route>

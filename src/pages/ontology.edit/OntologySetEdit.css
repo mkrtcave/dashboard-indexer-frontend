@@ -1,0 +1,7 @@
+.ontology-save-buttons {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1030;
+    padding-top: .5rem;
+}

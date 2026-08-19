@@ -9,6 +9,8 @@ import Edit from "./pages/edit/Edit";
 import NavBar from "./NavBar";
 import Toast from "./Toast";
 import NotFound from "./pages/not.found/NotFound";
+import OntologyHome from "./pages/ontology.home/OntologyHome";
+import OntologySetEdit from "./pages/ontology.edit/OntologySetEdit";
 
 class App extends React.Component {
     constructor(props) {
@@ -33,6 +35,11 @@ class App extends React.Component {
                         <Home addAlert={this.addAlert}/>
                     </Route>
                     <Route exact path={["/index/:id", "/index"]} children={<Edit addAlert={this.addAlert}/>}/>
+                    <Route exact path={"/ontology-sets"}>
+                        <OntologyHome addAlert={this.addAlert}/>
+                    </Route>
+                    <Route exact path={["/ontology-set/:id", "/ontology-set"]}
+                           children={<OntologySetEdit addAlert={this.addAlert}/>}/>
                     <Route children={<NotFound/>}/>
                 </Switch>
                 <div className={"toasts p-4 mh-100  overflow-auto"}>
