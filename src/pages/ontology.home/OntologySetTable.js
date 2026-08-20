@@ -12,7 +12,7 @@ class OntologySetTable extends React.Component {
             configs: [],
             connected: true,
             deletePopupShow: false,
-            deleteData: false
+            deleteData: true
         };
     }
 
@@ -72,7 +72,7 @@ class OntologySetTable extends React.Component {
         this.setState({
             deletePopupShow: true,
             deletePopupConfig: config,
-            deleteData: false
+            deleteData: true
         });
     }
 
